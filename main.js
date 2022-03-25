@@ -2,10 +2,10 @@ import BST from "./lib/binary-tree";
 
 const myBST = new BST();
 
-myBST.insert(10);
-myBST.insert(12);
-myBST.insert(57);
-myBST.insert(57);
-myBST.insert(8);
+const rawTree = [11, 6, 8, 19, 4, 10, 5, 17, 43, 49, 31];
 
-console.log(myBST);
+rawTree.forEach(item => {
+  myBST.insert(item);
+})
+
+console.log(myBST.getLargest());
