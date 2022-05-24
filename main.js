@@ -1,11 +1,24 @@
-import BST from "./lib/binary-tree";
+import Graph from "./lib/graphs";
 
-const myBST = new BST();
+const graph = new Graph();
 
-const rawTree = [11, 6, 8, 19, 4, 10, 5, 17, 43, 49, 31];
+graph.addVertex('A');
+graph.addVertex('B');
+graph.addVertex('C');
+graph.addVertex('D');
+graph.addVertex('E');
+graph.addVertex('F');
 
-rawTree.forEach(item => {
-  myBST.insert(item);
-})
+graph.addEdge('A', 'B', 5)
+graph.addEdge('A', 'C', 3)
+graph.addEdge('A', 'F', 7)
+graph.addEdge('B', 'C', 6)
+graph.addEdge('B', 'D', 2)
+graph.addEdge('B', 'E', 4)
+graph.addEdge('D', 'E', 2)
+graph.addEdge('D', 'C', 3)
+graph.addEdge('F', 'C', 8)
 
-console.log(myBST.getLargest());
+console.log(graph.adjacencyList)
+
+// graph.display()

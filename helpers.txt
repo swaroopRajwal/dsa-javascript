@@ -1,0 +1,3 @@
+this example of binary search tree is so easy to draw on papers
+const rawTree = [11, 6, 8, 19, 4, 10, 5, 17, 43, 49, 31];
+
